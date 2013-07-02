@@ -8,6 +8,7 @@
 #ifndef SENSORCAPE_H_
 #define SENSORCAPE_H_
 
+#include <iostream>
 #include "motion.h"
 #include "light.h"
 #include "am_temp.h"
@@ -63,6 +64,10 @@ public:
 	// Constructors and Destructors
 	SensorCape();
 	~SensorCape();
+
+	// Access internal sensors
+	MotionSensor *getMotionSensor();
+
 
 	// Sensor interface functions
 	// Motion Sensor

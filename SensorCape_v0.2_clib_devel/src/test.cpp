@@ -10,8 +10,10 @@
 using namespace std;
 
 int main() {
-	cout << "----- Beginning of SensorCape test suite -----" << endl;
-    SensorCape *board = new SensorCape();
-	cout << "----- End of SensorCape test suite -----" << endl;
+	cout << "----- Beginning of SensorCape test suite -----" << endl << endl;
+    SensorCape *sensors = new SensorCape();
+    MotionSensor *motion = NULL;
+    motion = sensors->getMotionSensor();
+	cout << "\n----- End of SensorCape test suite -----" << endl;
 	return 0;
 }

@@ -4,17 +4,20 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
-../src/test.cpp 
+../lib/SensorCape.cpp \
+../lib/motion.cpp 
 
 OBJS += \
-./src/test.o 
+./lib/SensorCape.o \
+./lib/motion.o 
 
 CPP_DEPS += \
-./src/test.d 
+./lib/SensorCape.d \
+./lib/motion.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-src/%.o: ../src/%.cpp
+lib/%.o: ../lib/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C++ Compiler'
 	g++ -I/usr/arm-linux-gnueabi/include/c++/4.7.2 -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -o "$@" "$<"

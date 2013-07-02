@@ -9,6 +9,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include src/subdir.mk
+-include lib/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -44,7 +45,7 @@ all: SensorCape
 SensorCape: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	/usr/yagarto-4.7.2/bin/arm-none-eabi-g++ -L/usr/arm-linux-gnueabi/lib -L"/Users/Mike/git/SensorCape/SensorCape_v0.2_clib_devel/lib" -L/usr/yagarto-4.7.2/arm-none-eabi/lib -o "SensorCape" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"/Users/Mike/git/SensorCape/SensorCape_v0.2_clib_devel/lib" -o "SensorCape" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
