@@ -8,7 +8,12 @@
 #ifndef LIGHT_H_
 #define LIGHT_H_
 
-
+class LightSensor {
+private:
+public:
+    LightSensor();
+    ~LightSensor();
+};
 
 
 #endif /* LIGHT_H_ */

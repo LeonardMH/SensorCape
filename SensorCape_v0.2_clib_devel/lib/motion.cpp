@@ -6,6 +6,7 @@
  */
  
 #include "motion.h"
+#include <iostream>
 using namespace std;
 
 MotionSensor::MotionSensor() {

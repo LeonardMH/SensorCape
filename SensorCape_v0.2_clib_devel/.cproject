@@ -42,6 +42,7 @@
 								<option id="gnu.cpp.link.option.paths.1644503004" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" valueType="libPaths">
 									<listOptionValue builtIn="false" value="/usr/arm-linux-gnueabi/lib"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/SensorCape/lib}&quot;"/>
+									<listOptionValue builtIn="false" value="/usr/yagarto-4.7.2/arm-none-eabi/lib"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.321814824" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
 									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
