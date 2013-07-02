@@ -16,4 +16,4 @@ This repository contains a two relevant top level folders.
 
 Contributors
 ============
-Michael Leonard - [My Website](http://michaelhleonard.com/) [My Email](mailto:maybeillrememberit@gmail.com)
+Michael Leonard - [My Website](http://michaelhleonard.com/) - [My Email](mailto:maybeillrememberit@gmail.com)
