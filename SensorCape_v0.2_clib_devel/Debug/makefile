@@ -44,7 +44,7 @@ all: SensorCape
 SensorCape: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	arm-linux-gnueabi-g++ -L/usr/arm-linux-gnueabi/lib -L"/home/mike/workspace/SensorCape/lib" -o "SensorCape" $(OBJS) $(USER_OBJS) $(LIBS)
+	/usr/yagarto-4.7.2/bin/arm-none-eabi-g++ -L/usr/arm-linux-gnueabi/lib -L"/Users/Mike/git/SensorCape/SensorCape_v0.2_clib_devel/lib" -L/usr/yagarto-4.7.2/arm-none-eabi/lib -o "SensorCape" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

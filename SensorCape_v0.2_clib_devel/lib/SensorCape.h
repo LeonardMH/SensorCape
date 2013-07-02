@@ -8,6 +8,15 @@
 #ifndef SENSORCAPE_H_
 #define SENSORCAPE_H_
 
+#include "motion.h"
+#include "light.h"
+#include "am_temp.h"
+#include "nc_temp.h"
+#include "humidity.h"
+#include "pressure.h"
+#include "infrared.h"
+#include "utility.h"
+
 class SensorCape {
 private:
 	// Define pin connections for the board, placeholder for now
@@ -45,7 +54,10 @@ private:
 	static const int pushButton2Pin = 13;
 	static const int pushButton3Pin = 14;
 	static const int pushButton4Pin = 15;
-
+    
+    // Define devices on the board
+	MotionSensor *motion;
+    
 public:
 	// Begin top level function definitions
 	// Constructors and Destructors
