@@ -1,3 +1,7 @@
 .DS_STORE
 **.o
 **.a
+.project
+.cproject
+Debug
+.settings
