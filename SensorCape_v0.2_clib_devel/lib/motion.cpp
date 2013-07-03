@@ -10,9 +10,11 @@
 using namespace std;
 
 MotionSensor::MotionSensor() {
+	cout << "Initializing MotionSensor" << endl;
 	cout << "MotionSensor initialized" << endl;
 } 
 
 MotionSensor::~MotionSensor() {
-	cout << "MotionSensor disconnected" << endl;
+	cout << "Disconnecting MotionSensor" << endl;
+	cout << "MotionSensor Disconnected" << endl;
 }

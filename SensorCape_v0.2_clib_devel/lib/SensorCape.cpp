@@ -10,7 +10,8 @@ using namespace std;
 
 SensorCape::SensorCape() {
 	cout << "Initializing SensorCape" << endl;
-	motion = new MotionSensor();
+	this->motion = new MotionSensor();
+	this->leds = new LED();
 	cout << "SensorCape initialized" << endl;
 }
 
@@ -54,6 +55,10 @@ double SensorCape::getMagnetometerX() {
 
 double SensorCape::getMagnetometerY() {
 	return 0.001;
+}
+
+LED* SensorCape::getLED() {
+	return this->leds;
 }
 
 double SensorCape::getMagnetometerZ() {

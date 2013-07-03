@@ -16,6 +16,7 @@
 #include "humidity.h"
 #include "pressure.h"
 #include "infrared.h"
+#include "led.h"
 #include "utility.h"
 
 class SensorCape {
@@ -58,6 +59,7 @@ private:
     
     // Define devices on the board
 	MotionSensor *motion;
+	LED *leds;
     
 public:
 	// Begin top level function definitions
@@ -67,7 +69,7 @@ public:
 
 	// Access internal sensors
 	MotionSensor *getMotionSensor();
-
+	LED *getLED();
 
 	// Sensor interface functions
 	// Motion Sensor
