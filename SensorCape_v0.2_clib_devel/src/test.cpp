@@ -7,21 +7,8 @@
 #include <iostream>
 #include "../lib/SensorCape.h"
 #include <unistd.h> // Used for sleep()
-#include <thread>
 
 using namespace std;
-
-void task1(string msg, LED *leds) {
-	cout << "Beginning first LED test";
-	for (int i = 0; i < 4; ++i) {
-		leds->ledOn(i);
-	}
-	sleep(2);
-	for (int i = 0; i < 4; ++i) {
-		leds->ledOff(i);
-	}
-}
-
 
 int main() {
 	cout << "----- Beginning of SensorCape test suite -----" << endl << endl;
