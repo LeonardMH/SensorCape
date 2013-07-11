@@ -4,6 +4,7 @@
  *  Created on: Jul 1, 2013
  *      Author: mike
  */
+
 #include <iostream>
 #include "../lib/SensorCape.h"
 #include <unistd.h> // Used for sleep()
@@ -13,11 +14,9 @@ using namespace std;
 int main() {
 	cout << "----- Beginning of SensorCape test suite -----" << endl << endl;
     SensorCape *sensors = new SensorCape();
-    MotionSensor *motion = 0;
-    LED *leds = 0;
 
-    motion = sensors->getMotionSensor();
-    leds = sensors->getLED();
+    MotionSensor *motion = sensors->getMotionSensor();
+    LED *leds = sensors->getLED();
 
     // Begin LED tests
 	cout << "Beginning first LED test";
@@ -61,6 +60,10 @@ int main() {
 
 	// Begin motion sensor tests
 	cout << "Beginning motion sensor tests" << endl;
+	cout << "Dumping 3 seconds of MotionSensor data to log file" << endl;
+
+	// End motion sensor test
+	cout << "Ending motion sensor tests" << endl;
 
     // Clean up
     delete sensors;
