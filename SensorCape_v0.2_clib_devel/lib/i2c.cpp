@@ -6,14 +6,14 @@
  */
 
 #include "i2c.h"
-#include <linux/i2c-dev.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <fcntl.h> // open();
 #include <unistd.h> // close();
 #include <sys/ioctl.h> // ioctl();
 
-I2C::I2C(int bus, int address) {
+I2C::I2C(int bus, __u16 address) {
+	file = 0;
 	this->address = address;
 	this->bus = bus;
 }
@@ -46,43 +46,54 @@ __s32 I2C::read8(__u8 reg) {
 	// Read a byte
 	this->openConnection();
 
-	char buffer[10];
-
-	if(read(file, buffer, 1) != 1) {
-		// ERROR
+	__s32 result;
+	result = i2c_smbus_read_byte_data(file, reg);
+	if (result < 0) {
+		// Error handling here
 	}
 
 	this->closeConnection();
-	return (__s32)atoi(buffer);
+	return result;
 }
 
-int I2C::write8(__u8 reg) {
+int I2C::write8(__u8 reg, __u8 data) {
 	// Write a byte
 	this->openConnection();
 
-	// TODO: Implement write8();
+	__s32 result;
+	result = i2c_smbus_write_byte_data(file, reg, data);
+	if (result < 0) {
+		// Error handling here
+	}
 
 	this->closeConnection();
+	return result;
 }
 
 int I2C::read16(__u8 reg) {
 	// Read a word
 	this->openConnection();
 
-	// TODO: Implement read16();
+	__s32 result;
+	result = i2c_smbus_read_word_data(file, reg);
+	if (result < 0) {
+		// Error handling here
+	}
 
 	this->closeConnection();
+	return result;
 }
 
-int I2C::write16(__u8 reg) {
+int I2C::write16(__u8 reg, __u16 data) {
 	// Write a word
 	this->openConnection();
 
-	// TODO: Implement write16();
+	__s32 result;
+	result = i2c_smbus_write_byte_data(file, reg, data);
+	if (result < 0) {
+		// Error handling here
+	}
 
 	this->closeConnection();
+	return result;
 }
-
-
-
-
