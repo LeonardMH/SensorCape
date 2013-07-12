@@ -19,7 +19,7 @@ int main() {
     LED *leds = sensors->getLED();
 
     // Begin LED tests
-	cout << "Beginning first LED test";
+	cout << "Beginning first LED test" << endl;;
 	for (int i = 0; i < 4; ++i) {
 		leds->ledOn(i);
 	}
@@ -28,7 +28,7 @@ int main() {
 		leds->ledOff(i);
 	}
 
-	cout << "Beginning next LED test";
+	cout << "Beginning next LED test" << endl;
 	for (int i = 0; i < 10; ++i) {
 		if (i % 2 == 0) {
 			for (int i = 0; i < 4; ++i) {
@@ -45,13 +45,13 @@ int main() {
 	}
 	for (int i = 0; i < 10; ++i) {
 		if (i % 2 == 0) {
-			for (int i = 4; i > 0; --i) {
+			for (int i = 3; i >= 0; --i) {
 				leds->ledOn(i);
 				usleep(50*1000);
 			}
 		}
 		else {
-			for (int i = 4; i > 0; --i) {
+			for (int i = 3; i >= 0; --i) {
 				leds->ledOff(i);
 				usleep(50*1000);
 			}
@@ -60,8 +60,11 @@ int main() {
 
 	// Begin motion sensor tests
 	cout << "Beginning motion sensor tests" << endl;
-	cout << "Dumping 3 seconds of MotionSensor data to log file" << endl;
-
+	cout << "Dumping MotionSensor data to stdout" << endl;
+	cout << "\tAccel X:\t" << motion->getAccelerometerX() << endl;
+	cout << "\tAccel Y:\t" << motion->getAccelerometerY() << endl;
+	cout << "\tAccel Z:\t" << motion->getAccelerometerZ() << endl;
+	cout << "Test hex: " << 0xfff0 << endl;
 	// End motion sensor test
 	cout << "Ending motion sensor tests" << endl;
 
