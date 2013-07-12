@@ -13,6 +13,8 @@ private:
 public:
     LightSensor();
     ~LightSensor();
+
+    __u16 readLightData();
 };
 
 
