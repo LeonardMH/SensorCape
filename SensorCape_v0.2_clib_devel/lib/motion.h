@@ -17,9 +17,9 @@ public:
     MotionSensor();
     ~MotionSensor();
 
-    __u32 getAccelerometerX();
-    __u32 getAccelerometerY();
-    __u32 getAccelerometerZ();
+    __u16 getAccelerometerX();
+    __u16 getAccelerometerY();
+    __u16 getAccelerometerZ();
 
     __u32 getGyroscopeX();
     __u32 getGyroscopeY();

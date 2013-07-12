@@ -14,7 +14,7 @@ MotionSensor::MotionSensor() {
 	cout << "Initializing MotionSensor" << endl;
 	i2c = new I2C(2, 0xD0);
 	cout << "MotionSensor initialized" << endl;
-} 
+}
 
 MotionSensor::~MotionSensor() {
 	cout << "Disconnecting MotionSensor" << endl;
@@ -23,15 +23,15 @@ MotionSensor::~MotionSensor() {
 	cout << "MotionSensor Disconnected" << endl;
 }
 
-__u32 MotionSensor::getAccelerometerX() {
+__u16 MotionSensor::getAccelerometerX() {
 	return (i2c->read8(0x3B) << 8) | i2c->read8(0x3C);
 }
 
-__u32 MotionSensor::getAccelerometerY() {
+__u16 MotionSensor::getAccelerometerY() {
 	return (i2c->read8(0x3D) << 8) | i2c->read8(0x3E);
 }
 
-__u32 MotionSensor::getAccelerometerZ() {
+__u16 MotionSensor::getAccelerometerZ() {
 	return (i2c->read8(0x3F) << 8) | i2c->read8(0x40);
 }
 
