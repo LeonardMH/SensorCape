@@ -1,6 +1,6 @@
-update=8/7/2013 9:52:31 PM
+update=Mon 10 Mar 2014 02:21:32 PM CDT
 version=1
-last_client=cvpcb
+last_client=eeschema
 [general]
 version=1
 [pcbnew]
@@ -44,6 +44,11 @@ LibName18=custom
 LibName19=fiducials
 LibName20=open-project
 LibDir=
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms
 [eeschema]
 version=1
 LibDir=
@@ -86,8 +91,3 @@ LibName30=contrib
 LibName31=valves
 LibName32=dips-s
 LibName33=open-project
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms

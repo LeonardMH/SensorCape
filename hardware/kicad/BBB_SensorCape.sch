@@ -39,7 +39,7 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 2
 Title "BeagleBone Black SensorCape"
-Date "8 aug 2013"
+Date "10 mar 2014"
 Rev "0.2"
 Comp "Michael Leonard"
 Comment1 ""
@@ -541,7 +541,7 @@ SW2
 Text Notes 5150 2200 0    60   ~ 0
 User Push\nButtons
 $Sheet
-S 4300 6700 1700 950 
+S 5400 3450 1700 950 
 U 51BE4754
 F0 "Connections" 50
 F1 "BBB_SensorCape_Connections.sch" 50
