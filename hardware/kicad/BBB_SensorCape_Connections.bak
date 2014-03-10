@@ -31,6 +31,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:dips-s
+LIBS:open-project
 LIBS:BBB_SensorCape-cache
 EELAYER 27 0
 EELAYER END
@@ -38,7 +39,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 2
 Title ""
-Date "8 jul 2013"
+Date "8 aug 2013"
 Rev ""
 Comp ""
 Comment1 ""
@@ -46,47 +47,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 1200 800  0    60   Input ~ 0
-I2C_SDA_1
-Text GLabel 1200 1000 0    60   Input ~ 0
-I2C_SCL_1
-$Comp
-L R R19
-U 1 1 51BE475E
-P 1500 800
-F 0 "R19" V 1580 800 40  0000 C CNN
-F 1 "4.7k" V 1507 801 40  0000 C CNN
-F 2 "~" V 1430 800 30  0000 C CNN
-F 3 "~" H 1500 800 30  0000 C CNN
-	1    1500 800 
-	0    -1   -1   0   
-$EndComp
-$Comp
-L R R20
-U 1 1 51BE476D
-P 1500 1000
-F 0 "R20" V 1580 1000 40  0000 C CNN
-F 1 "4.7k" V 1507 1001 40  0000 C CNN
-F 2 "~" V 1430 1000 30  0000 C CNN
-F 3 "~" H 1500 1000 30  0000 C CNN
-	1    1500 1000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1200 800  1250 800 
-Wire Wire Line
-	1200 1000 1250 1000
-Wire Wire Line
-	1750 800  1800 800 
-Wire Wire Line
-	1800 800  1800 1000
-Wire Wire Line
-	1800 1000 1750 1000
-Wire Wire Line
-	1800 900  1850 900 
-Connection ~ 1800 900 
-Text GLabel 1850 900  2    60   Input ~ 0
-3V3B
 Text GLabel 1200 1200 0    60   Input ~ 0
 I2C_SDA_2
 Text GLabel 1200 1400 0    60   Input ~ 0
@@ -124,44 +84,8 @@ Wire Wire Line
 Wire Wire Line
 	1800 1400 1750 1400
 Wire Wire Line
-	1800 1300 1850 1300
+	1800 1300 1950 1300
 Connection ~ 1800 1300
-Text GLabel 1850 1300 2    60   Input ~ 0
-3V3B
-Wire Wire Line
-	3100 2000 3050 2000
-Text GLabel 3050 2000 0    60   Input ~ 0
-3V3A
-Wire Wire Line
-	3900 2000 3950 2000
-Text GLabel 3950 2000 2    60   Input ~ 0
-3V3B
-$Comp
-L GND #PWR026
-U 1 1 51BE4B59
-P 2950 1900
-F 0 "#PWR026" H 2950 1900 30  0001 C CNN
-F 1 "GND" H 2950 1830 30  0001 C CNN
-F 2 "" H 2950 1900 60  0000 C CNN
-F 3 "" H 2950 1900 60  0000 C CNN
-	1    2950 1900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	3100 1900 2950 1900
-$Comp
-L GND #PWR027
-U 1 1 51BE4B79
-P 4100 1900
-F 0 "#PWR027" H 4100 1900 30  0001 C CNN
-F 1 "GND" H 4100 1830 30  0001 C CNN
-F 2 "" H 4100 1900 60  0000 C CNN
-F 3 "" H 4100 1900 60  0000 C CNN
-	1    4100 1900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	3900 1900 4100 1900
 Wire Wire Line
 	3100 4000 3050 4000
 Wire Wire Line
@@ -178,62 +102,17 @@ Wire Wire Line
 Connection ~ 3950 4100
 Wire Wire Line
 	3950 4200 3050 4200
-$Comp
-L GND #PWR028
-U 1 1 51BE4C2C
-P 3500 4250
-F 0 "#PWR028" H 3500 4250 30  0001 C CNN
-F 1 "GND" H 3500 4180 30  0001 C CNN
-F 2 "" H 3500 4250 60  0000 C CNN
-F 3 "" H 3500 4250 60  0000 C CNN
-	1    3500 4250
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	3500 4200 3500 4250
 Connection ~ 3500 4200
 Wire Wire Line
-	3100 2700 3050 2700
-Wire Wire Line
-	3900 2700 3950 2700
-Wire Wire Line
 	3100 2800 3050 2800
 Wire Wire Line
 	3900 2800 3950 2800
-Text GLabel 3950 2700 2    51   Input ~ 0
-I2C_SDA_1
 Text GLabel 3950 2800 2    51   Input ~ 0
 I2C_SDA_2
-Text GLabel 3050 2700 0    51   Input ~ 0
-I2C_SCL_1
 Text GLabel 3050 2800 0    51   Input ~ 0
 I2C_SCL_2
-$Comp
-L GND #PWR029
-U 1 1 51BE4CD7
-P 800 1900
-F 0 "#PWR029" H 800 1900 30  0001 C CNN
-F 1 "GND" H 800 1830 30  0001 C CNN
-F 2 "" H 800 1900 60  0000 C CNN
-F 3 "" H 800 1900 60  0000 C CNN
-	1    800  1900
-	0    1    1    0   
-$EndComp
-$Comp
-L GND #PWR030
-U 1 1 51BE4CE6
-P 1800 1900
-F 0 "#PWR030" H 1800 1900 30  0001 C CNN
-F 1 "GND" H 1800 1830 30  0001 C CNN
-F 2 "" H 1800 1900 60  0000 C CNN
-F 3 "" H 1800 1900 60  0000 C CNN
-	1    1800 1900
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	900  1900 800  1900
-Wire Wire Line
-	1700 1900 1800 1900
 NoConn ~ 1700 2800
 NoConn ~ 1700 2900
 NoConn ~ 900  2900
@@ -265,42 +144,21 @@ NoConn ~ 1700 2100
 NoConn ~ 900  2000
 NoConn ~ 900  2100
 NoConn ~ 3100 2100
-NoConn ~ 3900 2100
 NoConn ~ 3100 2200
 NoConn ~ 3900 2200
 NoConn ~ 3100 2300
 NoConn ~ 3900 2300
-Text GLabel 1700 2300 2    51   Input ~ 0
-LED1
-Text GLabel 900  2200 0    51   Input ~ 0
-LED3
-Text GLabel 900  2300 0    51   Input ~ 0
-LED2
-Text GLabel 1700 2200 2    51   Input ~ 0
-LED4
-Wire Wire Line
-	3100 2900 3050 2900
-Wire Wire Line
-	3900 2900 3950 2900
-Wire Wire Line
-	3100 3000 3050 3000
-Wire Wire Line
-	3900 3000 3950 3000
-Text GLabel 3100 3100 0    51   Input ~ 0
+Text GLabel 3100 3000 0    51   Input ~ 0
 SW1
-Text GLabel 3950 3000 2    51   Input ~ 0
-SW3
-Text GLabel 3050 3000 0    51   Input ~ 0
+Text GLabel 3900 3000 2    51   Input ~ 0
 SW2
-Text GLabel 3900 3100 2    51   Input ~ 0
-SW4
-Text GLabel 3950 2900 2    51   Input ~ 0
+Text GLabel 1700 2300 2    51   Input ~ 0
 INT_M
 Text GLabel 3900 2400 2    51   Input ~ 0
 INT_T
 Text GLabel 900  2400 0    51   Input ~ 0
 INT_LT
-Text GLabel 3100 2400 0    51   Input ~ 0
+Text GLabel 900  2300 0    51   Input ~ 0
 IR
 $Comp
 L CONN_23X2 P8
@@ -324,8 +182,131 @@ F 3 "~" H 3500 3100 60  0000 C CNN
 	1    3500 3100
 	1    0    0    -1  
 $EndComp
-Text GLabel 900  2700 0    51   Input ~ 0
-AL
-Text GLabel 900  2800 0    51   Input ~ 0
-AH
+$Comp
+L DGND #PWR048
+U 1 1 5202CF7F
+P 4100 1750
+F 0 "#PWR048" H 4100 1750 40  0001 C CNN
+F 1 "DGND" H 4100 1680 40  0000 C CNN
+F 2 "" H 4100 1750 60  0000 C CNN
+F 3 "" H 4100 1750 60  0000 C CNN
+	1    4100 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 1900 3950 1900
+Wire Wire Line
+	3950 1900 3950 1650
+Wire Wire Line
+	3050 1650 4100 1650
+Wire Wire Line
+	4100 1650 4100 1750
+Wire Wire Line
+	3100 1900 3050 1900
+Wire Wire Line
+	3050 1900 3050 1650
+Connection ~ 3950 1650
+Wire Wire Line
+	3900 2000 4250 2000
+Wire Wire Line
+	4250 2000 4250 1700
+$Comp
+L 3V3 #PWR049
+U 1 1 5202CFE3
+P 4250 1700
+F 0 "#PWR049" H 4250 1800 40  0001 C CNN
+F 1 "3V3" H 4250 1825 40  0000 C CNN
+F 2 "" H 4250 1700 60  0000 C CNN
+F 3 "" H 4250 1700 60  0000 C CNN
+	1    4250 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L DGND #PWR050
+U 1 1 5202CFF2
+P 1900 2050
+F 0 "#PWR050" H 1900 2050 40  0001 C CNN
+F 1 "DGND" H 1900 1980 40  0000 C CNN
+F 2 "" H 1900 2050 60  0000 C CNN
+F 3 "" H 1900 2050 60  0000 C CNN
+	1    1900 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 1300 1950 1200
+$Comp
+L DGND #PWR051
+U 1 1 5202D1BF
+P 3500 4250
+F 0 "#PWR051" H 3500 4250 40  0001 C CNN
+F 1 "DGND" H 3500 4180 40  0000 C CNN
+F 2 "" H 3500 4250 60  0000 C CNN
+F 3 "" H 3500 4250 60  0000 C CNN
+	1    3500 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3,3V #PWR052
+U 1 1 5202D635
+P 2900 1750
+F 0 "#PWR052" H 2900 1710 30  0001 C CNN
+F 1 "+3,3V" H 2900 1860 30  0000 C CNN
+F 2 "" H 2900 1750 60  0000 C CNN
+F 3 "" H 2900 1750 60  0000 C CNN
+	1    2900 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2000 3100 2000
+Wire Wire Line
+	2900 2000 2900 1750
+$Comp
+L +3,3V #PWR053
+U 1 1 5202D913
+P 1950 1200
+F 0 "#PWR053" H 1950 1160 30  0001 C CNN
+F 1 "+3,3V" H 1950 1310 30  0000 C CNN
+F 2 "" H 1950 1200 60  0000 C CNN
+F 3 "" H 1950 1200 60  0000 C CNN
+	1    1950 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2500 3950 2500
+Text GLabel 3950 2500 2    51   Input ~ 0
+IR_PWM
+Wire Wire Line
+	3900 2100 4400 2100
+Wire Wire Line
+	4400 2100 4400 1700
+$Comp
+L +5V #PWR054
+U 1 1 5202F04E
+P 4400 1700
+F 0 "#PWR054" H 4400 1790 20  0001 C CNN
+F 1 "+5V" H 4400 1790 30  0000 C CNN
+F 2 "" H 4400 1700 60  0000 C CNN
+F 3 "" H 4400 1700 60  0000 C CNN
+	1    4400 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 1900 1900 1900
+Wire Wire Line
+	1900 1900 1900 2050
+$Comp
+L DGND #PWR?
+U 1 1 520364B0
+P 700 2050
+F 0 "#PWR?" H 700 2050 40  0001 C CNN
+F 1 "DGND" H 700 1980 40  0000 C CNN
+F 2 "" H 700 2050 60  0000 C CNN
+F 3 "" H 700 2050 60  0000 C CNN
+	1    700  2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	700  2050 700  1900
+Wire Wire Line
+	700  1900 900  1900
 $EndSCHEMATC
