@@ -1,8 +1,6 @@
-update=Mon 10 Mar 2014 02:21:32 PM CDT
+update=Fri 14 Mar 2014 06:43:02 PM CDT
 version=1
-last_client=eeschema
-[general]
-version=1
+last_client=kicad
 [pcbnew]
 version=1
 LastNetListRead=
@@ -91,3 +89,5 @@ LibName30=contrib
 LibName31=valves
 LibName32=dips-s
 LibName33=open-project
+[general]
+version=1
