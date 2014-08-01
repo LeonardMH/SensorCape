@@ -9,6 +9,4 @@
 #define IR_H_
 
 
-
-
 #endif /* IR_H_ */

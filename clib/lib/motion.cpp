@@ -10,16 +10,21 @@
 #include <iostream>
 using namespace std;
 
+// #defines
+#define DEVICE_ADDRESS1		0xD0
+#define ACCEL_X_AXIS_REG	0x3B
+#define ACCEL_Y_AXIS_REG	0x3D
+
 MotionSensor::MotionSensor() {
 	cout << "Initializing MotionSensor" << endl;
-	i2c = new I2C(2, 0xD0);
+	i2c = new I2C(2, DEVICE_ADDRESS1);
 	cout << "MotionSensor initialized" << endl;
 }
 
 MotionSensor::~MotionSensor() {
 	cout << "Disconnecting MotionSensor" << endl;
-	delete i2c;
 	i2c = 0;
+	delete i2c;
 	cout << "MotionSensor Disconnected" << endl;
 }
 

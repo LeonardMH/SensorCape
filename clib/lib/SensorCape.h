@@ -19,6 +19,10 @@
 #include "led.h"
 #include "utility.h"
 
+#define MOTION_SDA_PIN 0x0001
+#define MOTION_SCL_PIN 0x0002
+#define MOTION_INT_PIN 0x0003
+
 class SensorCape {
 private:
 	// Define pin connections for the board, placeholder for now
